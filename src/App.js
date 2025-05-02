@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import Sidebar from './components/Sidebar';
+import Landing from './components/Landing';
+import { Canvas } from '@react-three/fiber';
+import { ScrollControls } from '@react-three/drei';
+import ScrollingCat from './model/ScrollingCat';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar />
+      <Landing />
+
+      <Canvas style={{ position: 'absolute', top: 0, left: 0, zIndex: -1 }}>
+        <ambientLight />
+        <directionalLight position={[5, 5, 5]} />
+        <ScrollControls pages={2} damping={4}>
+          <ScrollingCat />
+        </ScrollControls>
+      </Canvas>
     </div>
   );
 }
