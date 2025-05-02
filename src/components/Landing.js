@@ -17,12 +17,12 @@ const Landing = () => {
 
     return (
         <div className="ml-64 p-10">
-            <h1 ref={titleRef} className="text-4xl font-bold text-green-800 ">
-                Welcome to My Website
-            </h1>
-            <p className="mt-6 text-gray-700 text-lg">
-                This is a modern React landing page with sidebar animation using GSAP.
-            </p>
+         
+            <h2 className="mt-4 text-green-700 text-lg font-bold">
+                This is a modern React landing page with sidebar animation using GSAP if u refresh page.
+                <br/>
+                User can ctrl model by scroll😁 just try and explore😫😎
+            </h2>
 
         </div>
     );

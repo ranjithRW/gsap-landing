@@ -5,8 +5,6 @@ import { Canvas } from '@react-three/fiber';
 import { ScrollControls } from '@react-three/drei';
 import ScrollingCat from './model/ScrollingCat';
 import './App.css';
-import { Cloud, Clouds } from "@react-three/drei";
-
 
 function App() {
   return (
